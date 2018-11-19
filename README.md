@@ -4,7 +4,7 @@
 ```$xslt
  public static void main(String[] args) {
         //start hack
-        JxBrowserHackUtil.hack();
+        JxBrowserHackUtil.hack(JxVersion.V6_18);
         
         String identity = UUID.randomUUID().toString();
         BrowserContextParams params = new BrowserContextParams("tmp/browser/" + identity);
@@ -38,6 +38,13 @@ JxBrowser license valid.
 ```
 
 
-## Support Versions
+## How To Change Version
+* Modify pom.xml ${jx.version} to target version
+* Change input version of JxBrowserHackUtil.hack();
 
+
+## Support Versions
+* V6.9
+* V6.18
+* V6.20
 

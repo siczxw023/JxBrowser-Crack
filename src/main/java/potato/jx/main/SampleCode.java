@@ -5,6 +5,7 @@ import com.teamdev.jxbrowser.chromium.BrowserContext;
 import com.teamdev.jxbrowser.chromium.BrowserContextParams;
 import com.teamdev.jxbrowser.chromium.swing.BrowserView;
 import potato.jx.crack.JxBrowserHackUtil;
+import potato.jx.crack.JxVersion;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +19,7 @@ import java.util.UUID;
 public class SampleCode {
     public static void main(String[] args) {
         //start hack
-        JxBrowserHackUtil.hack();
+        JxBrowserHackUtil.hack(JxVersion.V6_18);
 
         String identity = UUID.randomUUID().toString();
         BrowserContextParams params = new BrowserContextParams("temp/browser/" + identity);

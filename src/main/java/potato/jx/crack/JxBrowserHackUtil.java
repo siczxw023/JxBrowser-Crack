@@ -12,7 +12,8 @@ import java.text.SimpleDateFormat;
  */
 public class JxBrowserHackUtil {
 
-    static final JxVersion JX_BROWSER_VERSION = JxVersion.V6_18;
+
+
     static boolean hacked = false;
 
     private static final Unsafe unsafe;
@@ -28,12 +29,12 @@ public class JxBrowserHackUtil {
     }
 
 
-    public static void hack() {
+    public static void hack(JxVersion version) {
         if (hacked) {
             return;
         }
         try {
-            HackClass target = getTargetClass();
+            HackClass target = getTargetClass(version);
             SimpleDateFormat df = target.getDateFormat();
             MySimpleDateFormat mySimpleDateFormat = new MySimpleDateFormat(df);
             setFinalStatic(target.getDateFormatField(), mySimpleDateFormat);
@@ -56,10 +57,10 @@ public class JxBrowserHackUtil {
         unsafe.putObject(base, offset, newValue);
     }
 
-    static HackClass getTargetClass() throws ClassNotFoundException {
+    static HackClass getTargetClass(JxVersion version) throws ClassNotFoundException {
         String className = "com.teamdev.jxbrowser.chromium.ay";
         String fieldName = "a";
-        switch (JX_BROWSER_VERSION) {
+        switch (version) {
             case V6_09:
                 className = "com.teamdev.jxbrowser.chromium.ay";
                 fieldName = "a";
