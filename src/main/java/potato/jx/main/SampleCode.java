@@ -19,7 +19,7 @@ import java.util.UUID;
 public class SampleCode {
     public static void main(String[] args) {
         //start hack
-        JxBrowserHackUtil.hack(JxVersion.V6_18);
+        JxBrowserHackUtil.hack(JxVersion.V6_22);
 
         String identity = UUID.randomUUID().toString();
         BrowserContextParams params = new BrowserContextParams("temp/browser/" + identity);

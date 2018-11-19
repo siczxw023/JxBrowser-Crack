@@ -69,6 +69,10 @@ public class JxBrowserHackUtil {
                 className = "com.teamdev.jxbrowser.chromium.ba";
                 fieldName = "a";
                 break;
+            case V6_22:
+                className ="com.teamdev.jxbrowser.chromium.bc";
+                fieldName = "a";
+                break;
         }
         Class t = Class.forName(className);
         return new HackClass(t, fieldName);

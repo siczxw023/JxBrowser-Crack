@@ -7,5 +7,6 @@ package potato.jx.crack;
  */
 public enum  JxVersion {
     V6_09,
-    V6_18,;
+    V6_18,
+    V6_22;
 }
